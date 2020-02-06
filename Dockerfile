@@ -53,6 +53,8 @@ RUN yum install -y --disableplugin=subscription-manager hostname procps \
 
 VOLUME ${NEXUS_DATA}
 
+RUN chown nexus:nexus ${NEXUS_DATA}
+
 EXPOSE 8081
 USER nexus
 
